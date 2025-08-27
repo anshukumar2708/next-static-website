@@ -3,6 +3,12 @@ import { servicesData } from '@/utils';
 import { Banner } from '@/components/ui/banner';
 import CtaSection from '@/components/ui/ctaSection';
 
+// Metadata for SEO
+export const metadata = {
+    title: "Services",
+    description:
+        "Services Page",
+};
 
 const Services = () => {
     const { banner, services, process, ctaData } = servicesData;

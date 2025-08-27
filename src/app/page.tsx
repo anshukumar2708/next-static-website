@@ -6,6 +6,13 @@ import { homeData } from '@/utils';
 import Card from '@/components/ui/card';
 import CtaSection from '@/components/ui/ctaSection';
 
+// Metadata for SEO
+export const metadata = {
+  title: "Home",
+  description:
+    "Home Page",
+};
+
 const Home = () => {
   const { features, services, ctaData } = homeData;
 

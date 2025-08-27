@@ -3,6 +3,13 @@ import { Banner } from '@/components/ui/banner';
 import PortfolioCard from '@/components/ui/portfolioCard';
 import CtaSection from '@/components/ui/ctaSection';
 
+// Metadata for SEO
+export const metadata = {
+    title: "Portfolio",
+    description:
+        "Portfolio Page",
+};
+
 const Portfolio = () => {
     const { banner, ctaData } = portfolioData;
 

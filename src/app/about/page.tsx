@@ -4,6 +4,13 @@ import { Banner } from '@/components/ui/banner';
 import Card from '@/components/ui/card';
 import CtaSection from '@/components/ui/ctaSection';
 
+// Metadata for SEO
+export const metadata = {
+    title: "About Us",
+    description:
+        "About Us Page",
+};
+
 const About = () => {
     const { banner, valuesData, stats, team, ctaData } = aboutData;
 

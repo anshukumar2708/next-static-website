@@ -3,6 +3,14 @@ import { Banner } from '@/components/ui/banner';
 import { contactData } from '@/utils';
 import { ContactForm } from '@/components/ui/contactForm';
 
+// Metadata for SEO
+export const metadata = {
+    title: "Contact Us",
+    description:
+        "Contact Us Page",
+};
+
+
 const Contact = () => {
     const { banner, faqData } = contactData;
 

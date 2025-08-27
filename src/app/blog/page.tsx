@@ -4,6 +4,14 @@ import { blogData } from '@/utils';
 import { Calendar, User, ArrowRight, Clock, Tag } from 'lucide-react';
 import Image from 'next/image';
 
+// Metadata for SEO
+export const metadata = {
+    title: "Blog",
+    description:
+        "Blog Page",
+};
+
+
 const Blog = () => {
     const { banner, categories, blogPosts, featuredPost, ctaData } = blogData;
 
