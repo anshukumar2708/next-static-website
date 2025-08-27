@@ -12,7 +12,11 @@ import {
   Users,
   Award,
   Clock,
-  Heart
+  Heart,
+  Code,
+  Smartphone,
+  Palette,
+  BarChart3,
 } from "lucide-react";
 import slider1 from '../public/assets/slider-1.jpg';
 import slider2 from '../public/assets/slider-2.jpg';
@@ -234,6 +238,99 @@ export const servicesData = {
     description:
       "Comprehensive digital solutions designed to accelerate your business growth and enhance your competitive advantage in the digital marketplace.",
   },
+  services: [
+    {
+      icon: <Code className="w-12 h-12" />,
+      title: "Web Development",
+      description: "Custom websites and web applications built with modern technologies and best practices.",
+      features: ["Responsive Design", "SEO Optimized", "Fast Performance", "Secure Code"],
+      price: "Starting at $2,999",
+      popular: false
+    },
+    {
+      icon: <Smartphone className="w-12 h-12" />,
+      title: "Mobile App Development",
+      description: "Native and cross-platform mobile applications for iOS and Android devices.",
+      features: ["Native iOS/Android", "Cross-platform", "App Store Publishing", "Push Notifications"],
+      price: "Starting at $4,999",
+      popular: true
+    },
+    {
+      icon: <Palette className="w-12 h-12" />,
+      title: "UI/UX Design",
+      description: "Beautiful, user-centered designs that drive engagement and conversion.",
+      features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],
+      price: "Starting at $1,999",
+      popular: false
+    },
+    {
+      icon: <BarChart3 className="w-12 h-12" />,
+      title: "Digital Marketing",
+      description: "Comprehensive digital marketing strategies to grow your online presence.",
+      features: ["SEO/SEM", "Social Media", "Content Marketing", "Analytics"],
+      price: "Starting at $1,499/month",
+      popular: false
+    },
+    {
+      icon: <Shield className="w-12 h-12" />,
+      title: "Security Solutions",
+      description: "Enterprise-grade security solutions to protect your business and data.",
+      features: ["Security Audits", "Penetration Testing", "Compliance", "24/7 Monitoring"],
+      price: "Starting at $999/month",
+      popular: false
+    },
+    {
+      icon: <Globe className="w-12 h-12" />,
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure and migration services for modern businesses.",
+      features: ["Cloud Migration", "DevOps", "Auto-scaling", "Backup Solutions"],
+      price: "Starting at $799/month",
+      popular: false
+    }
+  ],
+
+  process: [
+    {
+      step: "01",
+      title: "Discovery",
+      description: "We start by understanding your business goals, challenges, and requirements."
+    },
+    {
+      step: "02",
+      title: "Strategy",
+      description: "Our team develops a comprehensive strategy tailored to your specific needs."
+    },
+    {
+      step: "03",
+      title: "Development",
+      description: "We bring your vision to life using cutting-edge technologies and best practices."
+    },
+    {
+      step: "04",
+      title: "Launch & Support",
+      description: "We ensure a smooth launch and provide ongoing support for your success."
+    }
+  ],
+  ctaData: {
+    heading: "Ready to Get Started?",
+    subHeading:
+      "Let's discuss your project and find the perfect solution for your business needs.",
+    links: [
+      {
+        href: "/contact",
+        label: "Get Started Today",
+        className:
+          "btn-secondary bg-white text-primary hover:bg-white/90",
+      },
+      {
+        href: "/portfolio",
+        label: "View Our Work",
+        className:
+          "btn-secondary bg-white/10 backdrop-blur-sm text-white border-white/20 hover:bg-white/20",
+      },
+    ],
+  },
+
 }
 
 // Portfolio Page Data

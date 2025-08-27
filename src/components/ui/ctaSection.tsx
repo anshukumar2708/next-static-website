@@ -25,6 +25,7 @@ export interface ICtaData {
 }
 
 const CtaSection = ({ ctaData }: { ctaData: ICtaData }) => {
+
     return (
         <section className="section-padding bg-gradient-primary text-white">
             <div className="container-width text-center">
@@ -59,12 +60,7 @@ const CtaSection = ({ ctaData }: { ctaData: ICtaData }) => {
 
                     {/* about page cards */}
                     {ctaData?.card && <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {[
-                            { title: "Innovation", description: "Pushing boundaries with creative solutions" },
-                            { title: "Excellence", description: "Delivering quality in every project" },
-                            { title: "Integrity", description: "Honest, transparent communication" },
-                            { title: "Collaboration", description: "Working together for success" }
-                        ].map((value, index) => (
+                        {ctaData?.card?.map((value, index) => (
                             <div key={index} className="p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
                                 <h3 className="text-lg font-semibold mb-2">{value.title}</h3>
                                 <p className="text-white/80">{value.description}</p>
