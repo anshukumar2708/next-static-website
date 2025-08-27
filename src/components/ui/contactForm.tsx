@@ -1,8 +1,14 @@
 "use client";
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
+import axios from "axios";
 
 export const ContactForm = () => {
+    const EMAILJS_URI = process.env.NEXT_PUBLIC_EMAILJS_URI || "https://api.emailjs.com/api/v1.0/email/send";;
+    const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    const EMAILJS_PRIVATE_KEY = process.env.NEXT_PUBLIC_EMAILJS_PRIVATE_KEY;
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -14,17 +20,34 @@ export const ContactForm = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setIsLoading(true);
-
-        // setFormData({
-        //     name: '',
-        //     email: '',
-        //     company: '',
-        //     service: '',
-        //     message: ''
-        // });
+        try {
+            setIsLoading(true);
+            const payload = {
+                service_id: EMAILJS_SERVICE_ID,
+                template_id: EMAILJS_TEMPLATE_ID,
+                user_id: EMAILJS_PUBLIC_KEY,
+                template_params: formData,
+                accessToken: EMAILJS_PRIVATE_KEY,
+            };
+            const res = await axios.post(EMAILJS_URI, payload,
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                }
+            );
+            console.log("Form Submit", res);
+        } catch (error) {
+            console.log("error", error);
+        }
+        setFormData({
+            name: '',
+            email: '',
+            company: '',
+            service: '',
+            message: ''
+        });
         setIsLoading(false);
-        console.log("formData", formData);
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
