@@ -524,6 +524,28 @@ export const contactData = {
     description:
       "Ready to start your project? Get in touch with our team and let's discuss how we can help transform your digital vision into reality.",
   },
+  faqData: [
+    {
+      question: "How long does a typical project take?",
+      answer:
+        "Project timelines vary based on scope and complexity, typically ranging from 4-16 weeks for most projects.",
+    },
+    {
+      question: "Do you offer post-launch support?",
+      answer:
+        "Yes, we provide comprehensive post-launch support including maintenance, updates, and technical assistance.",
+    },
+    {
+      question: "What's your payment structure?",
+      answer:
+        "We typically work with a 50% upfront payment and 50% upon completion, with milestone payments for larger projects.",
+    },
+    {
+      question: "Can you work with our existing team?",
+      answer:
+        "Absolutely! We're experienced in collaborating with in-house teams and can adapt to your workflow.",
+    },
+  ]
 }
 
 
