@@ -19,6 +19,7 @@ export interface ICards {
 export interface ICtaData {
     heading: string;
     subHeading: string;
+    subscribe?: string;
     links?: ICtaLink[];
     benefits?: IBenefit[];
     card?: ICards[]
@@ -67,6 +68,21 @@ const CtaSection = ({ ctaData }: { ctaData: ICtaData }) => {
                             </div>
                         ))}
                     </div>}
+
+                    {/* Blog page section */}
+                    {ctaData?.subscribe && <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            className="flex-1 px-4 py-3 rounded-lg text-foreground bg-white focus:ring-2 focus:ring-accent focus:outline-none"
+                        />
+                        <button className="btn-secondary bg-white text-primary hover:bg-white/90 whitespace-nowrap">
+                            Subscribe
+                        </button>
+                    </div>}
+                    {ctaData?.subscribe && <p className="text-sm text-white/70 mt-4">
+                        No spam, unsubscribe at any time.
+                    </p>}
                 </div>
             </div>
         </section>

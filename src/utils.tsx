@@ -405,9 +405,9 @@ export const portfolioData = {
     }
   ],
   ctaData: {
-    heading: "Ready to Create Something Amazing?",
+    heading: "Stay in the Loop",
     subHeading:
-      "Let's work together to bring your vision to life and create your next success story.",
+      "Subscribe to our newsletter and get the latest insights delivered directly to your inbox.",
     links: [
       {
         href: "/contact",
@@ -432,6 +432,87 @@ export const blogData = {
     highlight: "Blog",
     description:
       "Stay updated with the latest trends, insights, and best practices in technology, design, and digital innovation.",
+  },
+  featuredPost: {
+    id: 1,
+    title: "The Future of Web Development: Trends to Watch in 2024",
+    excerpt: "Discover the latest trends shaping the web development landscape and how they'll impact your business in the coming year.",
+    author: "Sarah Johnson",
+    date: "December 15, 2024",
+    readTime: "8 min read",
+    category: "Technology",
+    image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&h=500&fit=crop",
+    featured: true
+  },
+
+  blogPosts: [
+    {
+      id: 2,
+      title: "10 UI/UX Design Principles Every Developer Should Know",
+      excerpt: "Essential design principles that will help you create more user-friendly and engaging digital experiences.",
+      author: "Mike Chen",
+      date: "December 12, 2024",
+      readTime: "6 min read",
+      category: "Design",
+      image: "https://images.unsplash.com/photo-1559028006-448665bd7c7f?w=400&h=300&fit=crop"
+    },
+    {
+      id: 3,
+      title: "Mobile App Security: Best Practices for 2024",
+      excerpt: "Learn how to protect your mobile applications and user data with these proven security strategies.",
+      author: "Emily Rodriguez",
+      date: "December 10, 2024",
+      readTime: "7 min read",
+      category: "Security",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop"
+    },
+    {
+      id: 4,
+      title: "Cloud Migration: A Complete Guide for Businesses",
+      excerpt: "Everything you need to know about migrating your business to the cloud safely and efficiently.",
+      author: "David Park",
+      date: "December 8, 2024",
+      readTime: "10 min read",
+      category: "Cloud",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop"
+    },
+    {
+      id: 5,
+      title: "Digital Marketing Strategies That Actually Work",
+      excerpt: "Proven digital marketing tactics to help your business reach more customers and increase conversions.",
+      author: "Lisa Wang",
+      date: "December 5, 2024",
+      readTime: "9 min read",
+      category: "Marketing",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop"
+    },
+    {
+      id: 6,
+      title: "The Rise of AI in Software Development",
+      excerpt: "How artificial intelligence is transforming the way we build and deploy software applications.",
+      author: "Alex Thompson",
+      date: "December 3, 2024",
+      readTime: "12 min read",
+      category: "AI",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop"
+    },
+    {
+      id: 7,
+      title: "Building Scalable E-commerce Solutions",
+      excerpt: "Key considerations and best practices for creating e-commerce platforms that grow with your business.",
+      author: "Sarah Johnson",
+      date: "December 1, 2024",
+      readTime: "8 min read",
+      category: "E-commerce",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop"
+    }
+  ],
+  categories: ["All", "Technology", "Design", "Security", "Cloud", "Marketing", "AI", "E-commerce"],
+  ctaData: {
+    heading: "Ready to Create Something Amazing?",
+    subHeading:
+      "Let's work together to bring your vision to life and create your next success story.",
+    subscribe: "subscribe",
   },
 }
 
