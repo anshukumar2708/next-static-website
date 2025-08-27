@@ -7,9 +7,12 @@ import {
   Phone,
   Twitter,
   Zap,
-  Users,
   Shield,
-  Globe
+  Globe,
+  Users,
+  Award,
+  Clock,
+  Heart
 } from "lucide-react";
 import slider1 from '../public/assets/slider-1.jpg';
 import slider2 from '../public/assets/slider-2.jpg';
@@ -168,9 +171,62 @@ export const aboutData = {
     description:
       "We're a passionate team of digital innovators committed to transforming businesses through cutting-edge technology and creative excellence.",
   },
+  stats: [
+    { icon: <Users className="w-8 h-8" />, title: "50+", description: "Team Members" },
+    { icon: <Award className="w-8 h-8" />, title: "500+", description: "Projects Completed" },
+    { icon: <Clock className="w-8 h-8" />, title: "5+", description: "Years Experience" },
+    { icon: <Heart className="w-8 h-8" />, title: "98%", description: "Client Satisfaction" }
+  ],
+
+  team: [
+    {
+      name: "Sarah Johnson",
+      role: "CEO & Founder",
+      description: "Visionary leader with 10+ years in digital transformation"
+    },
+    {
+      name: "Mike Chen",
+      role: "CTO",
+      description: "Technology expert specializing in scalable solutions"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Design Director",
+      description: "Creative genius behind our award-winning designs"
+    }
+  ],
+  valuesData: [
+    "Innovation First",
+    "Client Success",
+    "Quality Delivery",
+    "Continuous Learning",
+  ],
+  ctaData: {
+    heading: "Our Values",
+    subHeading:
+      "The principles that guide everything we do.",
+    card: [
+      {
+        title: "Innovation",
+        description: "Pushing boundaries with creative solutions",
+      },
+      {
+        title: "Excellence",
+        description: "Delivering quality in every project",
+      },
+      {
+        title: "Integrity",
+        description: "Honest, transparent communication",
+      },
+      {
+        title: "Collaboration",
+        description: "Working together for success",
+      },
+    ]
+  },
 }
 
-// About Us Page Data
+// Services Page Data
 export const servicesData = {
   banner: {
     title: "Our",

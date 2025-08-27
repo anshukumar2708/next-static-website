@@ -22,7 +22,7 @@ const Card: React.FC<CardProps> = ({ features }) => {
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-primary text-white rounded-full mb-4">
                         {feature?.icon}
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">{feature?.title}</h3>
+                    <h3 className="text-xl font-semibold text-primary mb-2">{feature?.title}</h3>
                     <p className="text-muted-foreground">{feature?.description}</p>
                 </div>
             ))}
