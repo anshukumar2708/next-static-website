@@ -1,8 +1,11 @@
 "use client";
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { Banner } from '@/components/ui/banner';
+import { contactData } from '@/utils';
 
 const Contact = () => {
+    const { banner } = contactData;
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -75,20 +78,8 @@ const Contact = () => {
 
     return (
         <div className="">
-            {/* Hero Section */}
-            <section className="section-padding bg-gradient-secondary">
-                <div className="container-width">
-                    <div className="max-w-4xl mx-auto text-center animate-fade-in">
-                        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                            Contact <span className="gradient-text">Us</span>
-                        </h1>
-                        <p className="text-xl text-muted-foreground leading-relaxed">
-                            Ready to start your project? Get in touch with our team and let&apos;s
-                            discuss how we can help transform your digital vision into reality.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            {/* Banner Section */}
+            <Banner banner={banner} />
 
             {/* Contact Section */}
             <section className="section-padding">

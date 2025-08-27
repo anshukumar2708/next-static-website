@@ -1,8 +1,11 @@
 import Link from 'next/link';
 import { Users, Award, Clock, Heart } from 'lucide-react';
+import { aboutData } from '@/utils';
+import { Banner } from '@/components/ui/banner';
 
 
 const About = () => {
+    const { banner } = aboutData;
     const stats = [
         { icon: <Users className="w-8 h-8" />, number: "50+", label: "Team Members" },
         { icon: <Award className="w-8 h-8" />, number: "500+", label: "Projects Completed" },
@@ -30,20 +33,8 @@ const About = () => {
 
     return (
         <div className="">
-            {/* Hero Section */}
-            <section className="section-padding bg-gradient-secondary">
-                <div className="container-width">
-                    <div className="max-w-4xl mx-auto text-center animate-fade-in">
-                        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                            About <span className="gradient-text">ModernBiz</span>
-                        </h1>
-                        <p className="text-xl text-muted-foreground leading-relaxed">
-                            We&apos;re a passionate team of digital innovators committed to transforming
-                            businesses through cutting-edge technology and creative excellence.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            {/* Banner Section */}
+            <Banner banner={banner} />
 
             {/* Story Section */}
             <section className="section-padding">

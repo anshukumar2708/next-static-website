@@ -15,7 +15,7 @@ export interface IBenefit {
 export interface ICtaData {
     heading: string;
     subHeading: string;
-    links: ICtaLink[];
+    links?: ICtaLink[];
     benefits?: IBenefit[];
 }
 

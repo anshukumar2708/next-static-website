@@ -2,9 +2,12 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { ExternalLink, Calendar, Tag } from 'lucide-react';
+import { portfolioData } from '@/utils';
+import { Banner } from '@/components/ui/banner';
 
 
 const Portfolio = () => {
+    const { banner } = portfolioData;
     const [activeFilter, setActiveFilter] = useState('All');
 
     const categories = ['All', 'Web Development', 'Mobile Apps', 'UI/UX Design', 'E-commerce'];
@@ -78,20 +81,8 @@ const Portfolio = () => {
 
     return (
         <div className="">
-            {/* Hero Section */}
-            <section className="section-padding bg-gradient-secondary">
-                <div className="container-width">
-                    <div className="max-w-4xl mx-auto text-center animate-fade-in">
-                        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                            Our <span className="gradient-text">Portfolio</span>
-                        </h1>
-                        <p className="text-xl text-muted-foreground leading-relaxed">
-                            Explore our latest projects and see how we&apos;ve helped businesses
-                            transform their digital presence and achieve exceptional results.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            {/* Banner Section */}
+            <Banner banner={banner} />
 
             {/* Filter Section */}
             <section className="py-12 bg-background border-b border-border">

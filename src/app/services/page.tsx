@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { Code, Smartphone, Palette, BarChart3, Shield, Globe, ArrowRight, CheckCircle } from 'lucide-react';
+import { servicesData } from '@/utils';
+import { Banner } from '@/components/ui/banner';
 
 
 const Services = () => {
+    const { banner } = servicesData
+
     const services = [
         {
             icon: <Code className="w-12 h-12" />,
@@ -79,20 +83,8 @@ const Services = () => {
 
     return (
         <div className="">
-            {/* Hero Section */}
-            <section className="section-padding bg-gradient-secondary">
-                <div className="container-width">
-                    <div className="max-w-4xl mx-auto text-center animate-fade-in">
-                        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                            Our <span className="gradient-text">Services</span>
-                        </h1>
-                        <p className="text-xl text-muted-foreground leading-relaxed">
-                            Comprehensive digital solutions designed to accelerate your business growth
-                            and enhance your competitive advantage in the digital marketplace.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            {/* Banner Section */}
+            <Banner banner={banner} />
 
             {/* Services Grid */}
             <section className="section-padding">

@@ -1,7 +1,11 @@
+import { Banner } from '@/components/ui/banner';
+import { blogData } from '@/utils';
 import { Calendar, User, ArrowRight, Clock, Tag } from 'lucide-react';
 import Image from 'next/image';
 
 const Blog = () => {
+    const { banner } = blogData;
+
     const featuredPost = {
         id: 1,
         title: "The Future of Web Development: Trends to Watch in 2024",
@@ -82,19 +86,7 @@ const Blog = () => {
     return (
         <div className="">
             {/* Hero Section */}
-            <section className="section-padding bg-gradient-secondary">
-                <div className="container-width">
-                    <div className="max-w-4xl mx-auto text-center animate-fade-in">
-                        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                            Our <span className="gradient-text">Blog</span>
-                        </h1>
-                        <p className="text-xl text-muted-foreground leading-relaxed">
-                            Stay updated with the latest trends, insights, and best practices
-                            in technology, design, and digital innovation.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <Banner banner={banner} />
 
             {/* Featured Post */}
             <section className="section-padding">

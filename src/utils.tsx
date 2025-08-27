@@ -63,7 +63,7 @@ export const footerLinks = {
 };
 
 
-// home page data
+// Home Page data
 export const homeData = {
   features: [
     {
@@ -159,3 +159,55 @@ export const homeData = {
     ],
   },
 };
+
+// About Us Page Data
+export const aboutData = {
+  banner: {
+    title: "About",
+    highlight: "Aimsoft",
+    description:
+      "We're a passionate team of digital innovators committed to transforming businesses through cutting-edge technology and creative excellence.",
+  },
+}
+
+// About Us Page Data
+export const servicesData = {
+  banner: {
+    title: "Our",
+    highlight: "Services",
+    description:
+      "Comprehensive digital solutions designed to accelerate your business growth and enhance your competitive advantage in the digital marketplace.",
+  },
+}
+
+// Portfolio Page Data
+export const portfolioData = {
+  banner: {
+    title: "Our",
+    highlight: "Portfolio",
+    description:
+      "Explore our latest projects and see how we've helped businesses transform their digital presence and achieve exceptional results.",
+  },
+}
+
+// Portfolio Page Data
+export const blogData = {
+  banner: {
+    title: "Our",
+    highlight: "Blog",
+    description:
+      "Stay updated with the latest trends, insights, and best practices in technology, design, and digital innovation.",
+  },
+}
+
+// Portfolio Page Data
+export const contactData = {
+  banner: {
+    title: "Contact",
+    highlight: "Us",
+    description:
+      "Ready to start your project? Get in touch with our team and let's discuss how we can help transform your digital vision into reality.",
+  },
+}
+
+
