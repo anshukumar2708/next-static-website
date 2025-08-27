@@ -2,8 +2,11 @@
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 import axios from "axios";
+import { toast } from 'react-toastify';
+import { contactData } from '@/utils';
 
 export const ContactForm = () => {
+    const { services } = contactData;
     const EMAILJS_URI = process.env.NEXT_PUBLIC_EMAILJS_URI || "https://api.emailjs.com/api/v1.0/email/send";;
     const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
@@ -29,16 +32,17 @@ export const ContactForm = () => {
                 template_params: formData,
                 accessToken: EMAILJS_PRIVATE_KEY,
             };
-            const res = await axios.post(EMAILJS_URI, payload,
+            await axios.post(EMAILJS_URI, payload,
                 {
                     headers: {
                         "Content-Type": "application/json",
                     },
                 }
             );
-            console.log("Form Submit", res);
+            toast.success("Email sent successfully!");
         } catch (error) {
             console.log("error", error);
+            toast.error("Something went wrong!");
         }
         setFormData({
             name: '',
@@ -57,15 +61,7 @@ export const ContactForm = () => {
         });
     };
 
-    const services = [
-        "Web Development",
-        "Mobile App Development",
-        "UI/UX Design",
-        "Digital Marketing",
-        "Security Solutions",
-        "Cloud Solutions",
-        "Consulting"
-    ];
+
 
     return (
         <div className="animate-slide-up">

@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Clock, } from 'lucide-react';
+import Link from 'next/link';
 import { Banner } from '@/components/ui/banner';
 import { contactData } from '@/utils';
 import { ContactForm } from '@/components/ui/contactForm';
@@ -10,36 +10,8 @@ export const metadata = {
         "Contact Us Page",
 };
 
-
 const Contact = () => {
-    const { banner, faqData } = contactData;
-
-    const contactInfo = [
-        {
-            icon: <Mail className="w-6 h-6" />,
-            title: "Email",
-            info: "hello@modernbiz.com",
-            link: "mailto:hello@modernbiz.com"
-        },
-        {
-            icon: <Phone className="w-6 h-6" />,
-            title: "Phone",
-            info: "+1 (555) 123-4567",
-            link: "tel:+15551234567"
-        },
-        {
-            icon: <MapPin className="w-6 h-6" />,
-            title: "Office",
-            info: "123 Business Ave, Tech City, TC 12345",
-            link: "#"
-        },
-        {
-            icon: <Clock className="w-6 h-6" />,
-            title: "Business Hours",
-            info: "Mon - Fri: 9AM - 6PM EST",
-            link: "#"
-        }
-    ];
+    const { banner, faqData, contactInfo } = contactData;
 
     return (
         <div className="">
@@ -73,12 +45,12 @@ const Contact = () => {
                                         <div>
                                             <h3 className="font-semibold mb-1">{item?.title}</h3>
                                             {item?.link !== "#" ? (
-                                                <a
+                                                <Link
                                                     href={item?.link}
                                                     className="text-muted-foreground hover:text-primary transition-colors duration-300"
                                                 >
                                                     {item?.info}
-                                                </a>
+                                                </Link>
                                             ) : (
                                                 <p className="text-muted-foreground">{item?.info}</p>
                                             )}

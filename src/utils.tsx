@@ -545,6 +545,41 @@ export const contactData = {
       answer:
         "Absolutely! We're experienced in collaborating with in-house teams and can adapt to your workflow.",
     },
+  ],
+  contactInfo: [
+    {
+      icon: <Mail className="w-6 h-6" />,
+      title: "Email",
+      info: "hello@modernbiz.com",
+      link: "mailto:hello@modernbiz.com"
+    },
+    {
+      icon: <Phone className="w-6 h-6" />,
+      title: "Phone",
+      info: "+1 (555) 123-4567",
+      link: "tel:+15551234567"
+    },
+    {
+      icon: <MapPin className="w-6 h-6" />,
+      title: "Office",
+      info: "123 Business Ave, Tech City, TC 12345",
+      link: "#"
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: "Business Hours",
+      info: "Mon - Fri: 9AM - 6PM EST",
+      link: "#"
+    }
+  ],
+  services: [
+    "Web Development",
+    "Mobile App Development",
+    "UI/UX Design",
+    "Digital Marketing",
+    "Security Solutions",
+    "Cloud Solutions",
+    "Consulting"
   ]
 }
 
