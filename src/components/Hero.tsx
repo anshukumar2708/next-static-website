@@ -3,10 +3,16 @@ import Image from 'next/image';
 import { ArrowRight, Play } from 'lucide-react';
 import heroImage from '../../public/assets/hero-bg.jpg';
 
+const statsData = [
+  { number: '500+', label: 'Projects Completed' },
+  { number: '98%', label: 'Client Satisfaction' },
+  { number: '50+', label: 'Team Members' },
+  { number: '24/7', label: 'Support Available' },
+];
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-5">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -35,7 +41,9 @@ const Hero = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <p
+            className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up"
+            style={{ animationDelay: '0.2s' }}>
             We create exceptional digital experiences that drive growth,
             engage audiences, and transform businesses in the modern world.
           </p>
@@ -59,16 +67,16 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-slide-up" style={{ animationDelay: '0.6s' }}>
-            {[
-              { number: '500+', label: 'Projects Completed' },
-              { number: '98%', label: 'Client Satisfaction' },
-              { number: '50+', label: 'Team Members' },
-              { number: '24/7', label: 'Support Available' }
-            ].map((stat, index) => (
+          <div
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-slide-up"
+            style={{ animationDelay: '0.6s' }}
+          >
+            {statsData?.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.number}</div>
-                <div className="text-sm text-white/70">{stat.label}</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                  {stat?.number}
+                </div>
+                <div className="text-sm text-white/70">{stat?.label}</div>
               </div>
             ))}
           </div>

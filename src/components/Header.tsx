@@ -3,20 +3,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
+import { headerLink } from '@/utils';
 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
-  ];
 
   const isActive = (href: string) => pathname === href;
 
@@ -29,22 +21,22 @@ const Header = () => {
             href="/"
             className="text-2xl font-bold gradient-text hover:scale-105 transition-transform duration-300"
           >
-            ModernBiz
+            Aimsoft
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Header */}
           <div className="hidden md:flex items-center space-x-8">
-            {navigation?.map((item) => (
+            {headerLink?.map((item) => (
               <Link
-                key={item.name}
-                href={item.href}
-                className={`relative font-medium transition-colors duration-300 hover:text-primary ${isActive(item.href)
+                key={item?.name}
+                href={item?.href}
+                className={`relative font-medium transition-colors duration-300 hover:text-primary ${isActive(item?.href)
                   ? 'text-primary'
                   : 'text-foreground/80'
                   }`}
               >
-                {item.name}
-                {isActive(item.href) && (
+                {item?.name}
+                {isActive(item?.href) && (
                   <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-primary rounded-full" />
                 )}
               </Link>
@@ -71,17 +63,17 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-16 left-0 right-0 bg-background border-b border-border shadow-lg animate-fade-in">
             <div className="px-4 py-4 space-y-3">
-              {navigation.map((item) => (
+              {headerLink?.map((item) => (
                 <Link
-                  key={item.name}
-                  href={item.href}
+                  key={item?.name}
+                  href={item?.href}
                   onClick={() => setIsMenuOpen(false)}
                   className={`block py-2 px-3 rounded-lg font-medium transition-colors duration-300 ${isActive(item.href)
                     ? 'text-primary bg-primary/10'
                     : 'text-foreground/80 hover:text-primary hover:bg-secondary'
                     }`}
                 >
-                  {item.name}
+                  {item?.name}
                 </Link>
               ))}
               <Link
@@ -94,6 +86,7 @@ const Header = () => {
             </div>
           </div>
         )}
+
       </nav>
     </header>
   );

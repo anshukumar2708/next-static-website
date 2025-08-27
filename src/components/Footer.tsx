@@ -1,8 +1,9 @@
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-import Link from 'next/link';
+import Link from "next/link";
+import { footerLinks } from "@/utils";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { socials, quickLinks, services, contactInfo, policies } = footerLinks;
 
   return (
     <footer className="bg-card border-t border-border">
@@ -12,21 +13,20 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/" className="text-2xl font-bold gradient-text">
-              ModernBiz
+              Aimsoft
             </Link>
             <p className="text-muted-foreground leading-relaxed">
-              Transforming digital visions into reality with innovative solutions
-              and exceptional service.
+              Transforming digital visions into reality with innovative solutions and exceptional service.
             </p>
             <div className="flex space-x-4">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
-                <a
+              {socials?.map(({ icon: Icon, href }, index) => (
+                <Link
                   key={index}
-                  href="#"
+                  href={href}
                   className="w-10 h-10 bg-secondary hover:bg-primary text-secondary-foreground hover:text-primary-foreground rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
                 >
                   <Icon className="w-5 h-5" />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -35,18 +35,13 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
-              {[
-                { name: 'About Us', href: '/about' },
-                { name: 'Services', href: '/services' },
-                { name: 'Portfolio', href: '/portfolio' },
-                { name: 'Blog', href: '/blog' },
-              ].map((link) => (
-                <li key={link.name}>
+              {quickLinks?.map(({ name, href }) => (
+                <li key={name}>
                   <Link
-                    href={link.href}
+                    href={href}
                     className="text-muted-foreground hover:text-primary transition-colors duration-300"
                   >
-                    {link.name}
+                    {name}
                   </Link>
                 </li>
               ))}
@@ -57,12 +52,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Services</h3>
             <ul className="space-y-2">
-              {[
-                'Web Development',
-                'Mobile Apps',
-                'UI/UX Design',
-                'Digital Marketing',
-              ].map((service) => (
+              {services?.map((service) => (
                 <li key={service}>
                   <span className="text-muted-foreground hover:text-primary transition-colors duration-300 cursor-pointer">
                     {service}
@@ -76,18 +66,15 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Contact Us</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-muted-foreground">
-                <MapPin className="w-5 h-5 text-primary" />
-                <span>123 Business Ave, Tech City</span>
-              </div>
-              <div className="flex items-center space-x-3 text-muted-foreground">
-                <Phone className="w-5 h-5 text-primary" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-3 text-muted-foreground">
-                <Mail className="w-5 h-5 text-primary" />
-                <span>hello@modernbiz.com</span>
-              </div>
+              {contactInfo?.map(({ icon: Icon, text }, index) => (
+                <div
+                  key={index}
+                  className="flex items-center space-x-3 text-muted-foreground"
+                >
+                  <Icon className="w-5 h-5 text-primary" />
+                  <span>{text}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -96,18 +83,18 @@ const Footer = () => {
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-muted-foreground text-sm">
-              © {currentYear} ModernBiz. All rights reserved.
+              © {currentYear} Aimsoft. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-                Terms of Service
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-                Cookie Policy
-              </a>
+              {policies?.map(({ name, href }) => (
+                <Link
+                  key={name}
+                  href={href}
+                  className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                >
+                  {name}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
