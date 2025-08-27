@@ -341,6 +341,88 @@ export const portfolioData = {
     description:
       "Explore our latest projects and see how we've helped businesses transform their digital presence and achieve exceptional results.",
   },
+  categories: ['All', 'Web Development', 'Mobile Apps', 'UI/UX Design', 'E-commerce'],
+  projects: [
+    {
+      id: 1,
+      title: "E-Commerce Platform",
+      category: "E-commerce",
+      description: "Modern e-commerce solution with advanced features and seamless user experience.",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+      tags: ["React", "Node.js", "Stripe"],
+      date: "2024",
+      link: "#"
+    },
+    {
+      id: 2,
+      title: "Mobile Banking App",
+      category: "Mobile Apps",
+      description: "Secure and intuitive banking application with biometric authentication.",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop",
+      tags: ["React Native", "Firebase", "Biometrics"],
+      date: "2024",
+      link: "#"
+    },
+    {
+      id: 3,
+      title: "SaaS Dashboard",
+      category: "Web Development",
+      description: "Comprehensive analytics dashboard for business intelligence and reporting.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      tags: ["Vue.js", "D3.js", "Python"],
+      date: "2023",
+      link: "#"
+    },
+    {
+      id: 4,
+      title: "Healthcare Platform",
+      category: "UI/UX Design",
+      description: "Patient-centered healthcare platform with telemedicine capabilities.",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop",
+      tags: ["Figma", "Prototyping", "User Research"],
+      date: "2023",
+      link: "#"
+    },
+    {
+      id: 5,
+      title: "Food Delivery App",
+      category: "Mobile Apps",
+      description: "On-demand food delivery application with real-time tracking.",
+      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=400&fit=crop",
+      tags: ["Flutter", "Google Maps", "WebSocket"],
+      date: "2023",
+      link: "#"
+    },
+    {
+      id: 6,
+      title: "Corporate Website",
+      category: "Web Development",
+      description: "Professional corporate website with CMS integration and SEO optimization.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      tags: ["Next.js", "CMS", "SEO"],
+      date: "2024",
+      link: "#"
+    }
+  ],
+  ctaData: {
+    heading: "Ready to Create Something Amazing?",
+    subHeading:
+      "Let's work together to bring your vision to life and create your next success story.",
+    links: [
+      {
+        href: "/contact",
+        label: "Get Started Today",
+        className:
+          "btn-secondary bg-white text-primary hover:bg-white/90",
+      },
+      {
+        href: "/portfolio",
+        label: "View Our Work",
+        className:
+          "btn-secondary bg-white/10 backdrop-blur-sm text-white border-white/20 hover:bg-white/20",
+      },
+    ],
+  },
 }
 
 // Portfolio Page Data
