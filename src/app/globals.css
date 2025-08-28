@@ -1,0 +1,266 @@
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+   /* Design System Variables */
+@layer base {
+  :root {
+    /* Brand Colors - Modern Blue/Purple Gradient Theme */
+    --background: 0 0% 100%;
+    --foreground: 215 25% 27%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    /* Primary Brand Colors */
+    --primary: 237 78% 55%;
+    --primary-hover: 237 78% 45%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary Brand Colors */
+    --secondary: 251 91% 95%;
+    --secondary-hover: 251 91% 90%;
+    --secondary-foreground: 215 25% 27%;
+
+    /* Accent Colors */
+    --accent: 280 100% 70%;
+    --accent-hover: 280 100% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 237 78% 55%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(237 78% 55%) 0%,
+      hsl(280 100% 70%) 100%
+    );
+    --gradient-secondary: linear-gradient(
+      135deg,
+      hsl(220 14% 96%) 0%,
+      hsl(0 0% 100%) 100%
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(237 78% 55%) 0%,
+      hsl(280 100% 70%) 50%,
+      hsl(310 100% 65%) 100%
+    );
+    --gradient-overlay: linear-gradient(
+      135deg,
+      rgba(59, 130, 246, 0.9) 0%,
+      rgba(147, 51, 234, 0.9) 100%
+    );
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-glow: 0 0 30px hsl(237 78% 55% / 0.3);
+
+    /* Animation Timings */
+    --transition-fast: 0.15s ease-out;
+    --transition-base: 0.3s ease-out;
+    --transition-slow: 0.5s ease-out;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Theme Overrides */
+    --background: 215 28% 17%;
+    --foreground: 0 0% 98%;
+
+    --card: 215 28% 17%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 215 28% 17%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 237 78% 65%;
+    --primary-hover: 237 78% 75%;
+    --primary-foreground: 215 28% 17%;
+
+    --secondary: 215 25% 25%;
+    --secondary-hover: 215 25% 30%;
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 280 100% 75%;
+    --accent-hover: 280 100% 85%;
+    --accent-foreground: 215 28% 17%;
+
+    --muted: 215 25% 25%;
+    --muted-foreground: 217 10% 64%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 25% 25%;
+    --input: 215 25% 25%;
+    --ring: 237 78% 65%;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(237 78% 65%) 0%,
+      hsl(280 100% 75%) 100%
+    );
+    --gradient-secondary: linear-gradient(
+      135deg,
+      hsl(215 25% 25%) 0%,
+      hsl(215 28% 17%) 100%
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(237 78% 65%) 0%,
+      hsl(280 100% 75%) 50%,
+      hsl(310 100% 70%) 100%
+    );
+    --gradient-overlay: linear-gradient(
+      135deg,
+      rgba(59, 130, 246, 0.8) 0%,
+      rgba(147, 51, 234, 0.8) 100%
+    );
+    --shadow-glow: 0 0 30px hsl(237 78% 65% / 0.4);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+
+  /* Base Resets */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+
+  /* Components */
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .card-gradient {
+    background: var(--gradient-secondary);
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105 border border-border;
+  }
+
+  .section-padding {
+    @apply py-20 px-4 md:px-8 lg:px-16;
+  }
+
+  .container-width {
+    @apply w-full px-2;
+  }
+
+  .animate-fade-in {
+    @apply animate-in fade-in duration-700;
+  }
+
+  .animate-slide-up {
+    @apply animate-in slide-in-from-bottom-8 duration-700;
+  }
+
+  .animate-scale {
+    @apply animate-in zoom-in duration-500;
+  }
+}
+
+
+ /* Slick Carousel Overrides */
+
+@layer components {
+  .slick-dots {
+    bottom: -50px !important;
+  }
+  .slick-dots li button:before {
+    color: hsl(var(--primary)) !important;
+    font-size: 12px !important;
+  }
+  .slick-dots li.slick-active button:before {
+    color: hsl(var(--accent)) !important;
+  }
+  .slick-prev,
+  .slick-next {
+    z-index: 10 !important;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    color: hsl(var(--primary)) !important;
+    font-size: 24px !important;
+  }
+}
+
+/* Custom Transition Utilities */
+
+@layer utilities {
+  .transition-fast {
+    transition: all var(--transition-fast);
+  }
+  .transition-base {
+    transition: all var(--transition-base);
+  }
+  .transition-slow {
+    transition: all var(--transition-slow);
+  }
+}

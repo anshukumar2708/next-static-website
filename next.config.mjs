@@ -1,0 +1,10 @@
+/** @type {import('next').NextConfig} */
+const basePath = '/corwin';
+
+const nextConfig = {
+  basePath,
+  trailingSlash: true,                 // canonical: /corwin/
+  env: { NEXT_PUBLIC_BASE_PATH: basePath },
+};
+
+export default nextConfig;
