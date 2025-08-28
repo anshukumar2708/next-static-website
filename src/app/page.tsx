@@ -26,7 +26,7 @@ const Home = () => {
         <div className="container-width">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Choose <span className="gradient-text">Aimsoft</span>
+              Why Choose <span className="gradient-text">Scale Infotech</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               We deliver exceptional results through innovation, expertise, and dedication to your success.

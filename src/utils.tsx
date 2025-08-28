@@ -171,7 +171,7 @@ export const homeData = {
 export const aboutData = {
   banner: {
     title: "About",
-    highlight: "Aimsoft",
+    highlight: "Scale Infotech",
     description:
       "We're a passionate team of digital innovators committed to transforming businesses through cutting-edge technology and creative excellence.",
   },

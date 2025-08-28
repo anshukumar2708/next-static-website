@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/" className="text-2xl font-bold gradient-text">
-              Aimsoft
+              Scale Infotech
             </Link>
             <p className="text-muted-foreground leading-relaxed">
               Transforming digital visions into reality with innovative solutions and exceptional service.
@@ -83,7 +83,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-muted-foreground text-sm">
-              © {currentYear} Aimsoft. All rights reserved.
+              © {currentYear} Scale Infotech. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               {policies?.map(({ name, href }) => (
