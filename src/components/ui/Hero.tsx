@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Play } from 'lucide-react';
-import heroImage from '../../public/assets/hero-bg.jpg';
+import heroImage from '../../../public/assets/hero-bg.jpg';
 
 const statsData = [
   { number: '500+', label: 'Projects Completed' },

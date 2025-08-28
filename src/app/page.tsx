@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import Hero from '@/components/Hero';
-import ImageSlider from '@/components/ImageSlider';
+import Hero from '@/components/ui/Hero';
+import ImageSlider from '@/components/ui/ImageSlider';
 import { homeData } from '@/utils';
 import Card from '@/components/ui/card';
 import CtaSection from '@/components/ui/ctaSection';
