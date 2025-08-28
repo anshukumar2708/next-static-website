@@ -378,7 +378,7 @@ export const portfolioData = {
       title: "Healthcare Platform",
       category: "UI/UX Design",
       description: "Patient-centered healthcare platform with telemedicine capabilities.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
       tags: ["Figma", "Prototyping", "User Research"],
       date: "2023",
       link: "#"
@@ -388,7 +388,7 @@ export const portfolioData = {
       title: "Food Delivery App",
       category: "Mobile Apps",
       description: "On-demand food delivery application with real-time tracking.",
-      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
       tags: ["Flutter", "Google Maps", "WebSocket"],
       date: "2023",
       link: "#"
@@ -425,7 +425,7 @@ export const portfolioData = {
   },
 }
 
-// Portfolio Page Data
+//Blog Page Data
 export const blogData = {
   banner: {
     title: "Our",
@@ -516,7 +516,7 @@ export const blogData = {
   },
 }
 
-// Portfolio Page Data
+// Contact Us Page Data
 export const contactData = {
   banner: {
     title: "Contact",
