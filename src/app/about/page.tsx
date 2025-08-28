@@ -27,7 +27,7 @@ const About = () => {
                             <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
                             <div className="space-y-4 text-lg text-muted-foreground">
                                 <p>
-                                    Founded in 2019, ModernBiz began as a small team of developers
+                                    Founded in 2019, Scale Infotech began as a small team of developers
                                     with a big vision: to democratize access to world-class digital solutions.
                                 </p>
                                 <p>

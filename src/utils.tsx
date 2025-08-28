@@ -59,7 +59,7 @@ export const footerLinks = {
   contactInfo: [
     { icon: MapPin, text: "123 Business Ave, Tech City" },
     { icon: Phone, text: "+1 (555) 123-4567" },
-    { icon: Mail, text: "hello@modernbiz.com" },
+    { icon: Mail, text: "info@scaleinfotech.com" },
   ],
 
   policies: [
@@ -550,8 +550,8 @@ export const contactData = {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      info: "hello@modernbiz.com",
-      link: "mailto:hello@modernbiz.com"
+      info: "info@scaleinfotec.com",
+      link: "mailto:info@scaleinfotec.com"
     },
     {
       icon: <Phone className="w-6 h-6" />,
